@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.osetrm.proto.instrument.v1";
+
+import "osetrm/instrument/v1/instrument_leg.proto";
+
+package osetrm.instrument.v1;
+
+message Instrument {
+  string value = 1;
+  repeated InstrumentLeg legs = 2;
+}
